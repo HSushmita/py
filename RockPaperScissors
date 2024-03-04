@@ -1,0 +1,53 @@
+import random
+for i in range(0,6):
+    rock = '''
+        _______
+    ---'   ____)
+          (_____)
+          (_____)
+          (____)
+    ---.__(___)
+    '''
+
+    paper = '''
+        _______
+    ---'   ____)____
+              ______)
+              _______)
+             _______)
+    ---.__________)
+    '''
+
+    scissors = '''
+        _______
+    ---'   ____)____
+              ______)
+           __________)
+          (____)
+    ---.__(___)
+    '''
+    img=[rock,paper,scissors]
+    a=int(input("enter your choice \n0 for rock,2 for scissors,1 for paper\n"))
+    print("users choice:")
+    if (a > 2 or a < 0):
+        print("invalid choice try again")
+    else:
+        print(img[a])
+        b=random.randint(0,2)
+        print("computers choice:\n")
+        print(img[b])
+        if (a>2 or a<0):
+            print("invalid choice try again")
+        elif (a==0 and b==1):
+            print("you lost")
+        elif (a==0 and b==2):
+            print("you won")
+        elif (a==1 and b==0):
+            print("you won")
+        elif (a==1 and b==2):
+            print("you lost")
+        elif (a==2 and b==0):
+            print("you lost")
+        elif (a==2 and b==1):
+            print("you won")
+        else:print("tied")
