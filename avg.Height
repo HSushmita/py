@@ -1,0 +1,12 @@
+#find the average height & no. of students
+student_heights = input().split()
+for n in range(0, len(student_heights)):
+  student_heights[n] = int(student_heights[n])
+height=0
+for i in student_heights:
+  height=height+i
+print(height)
+b=len(student_heights)
+print("no. of students",b)
+avg=float(height/b)
+print("avg height:",avg)
